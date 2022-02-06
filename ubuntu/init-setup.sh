@@ -5,23 +5,25 @@
                 echo "Witaj w init-setup do Linuxa" 
                 echo "-----------------------------------------"
                 echo
-sleep2
+sleep 3s
                 echo
                 echo "Zainstalują się podstawowe programy do użytku" 
                 echo "oraz zaawansowane oprogramowanie"
                 echo 
                 echo
-sleep5
+sleep 3s
 
 # Instalowanie podstawowych narzędzi linux
 echo "Instalacja podstawowych narzędzi"
 sleep2
-sudo apt install -y net-tools htp wget silversearcher-ag guake git curl nano apt-transport-https ca-certificates gnupg-agent software-properties-common lsb-release ssh
+apt update
+apt upgrade -y
+sudo apt install -y net-tools htp wget silversearcher-ag guake git curl nano apt-transport-https ca-certificates gnupg-agent software-properties-common lsb-release ssh gdebi mc
 
 
 #INSTALL DOCKER
 echo "Instaluję Docker"
-sleep 2s
+sleep 3s
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 cat /etc/os-release
 read -p "INFORME O NONE DO UBUNTU_CODENAME DO TEXTO ACIMA: " codename
