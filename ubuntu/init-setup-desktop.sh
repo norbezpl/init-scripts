@@ -36,7 +36,8 @@ git clone https://github.com/lawl/NoiseTorch # Clone the repository
  make # build it
 
 # Mainline
-cd /home/$USER
+mkdir /etc/test
+cd /etc/test
 git clone https://github.com/bkw777/mainline.git
 cd mainline
 make
