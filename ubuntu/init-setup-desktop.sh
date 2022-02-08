@@ -5,9 +5,13 @@
 # Instalowanie podstawowych narzędzi do linuxa desktop
 sudo apt update
 sudo apt upgrade -y
-sudo add-apt-repository ppa:teejee2008/ppa
-sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-add-apt-repository -y ppa:philip.scott/pantheon-tweaks
+sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
+sudo add-apt-repository -y ppa:philip.scott/pantheon-tweaks
+sudo add-apt-repository -y ppa:teejee2008/ppa
+sudo add-apt-repository -y ppa:cappelikan/ppa
+apt update
+sudo apt install -y libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
+sudo apt install -y snapd net-tools ssh mainline
 
 apt update
 sudo apt install elementary-tweaks
@@ -31,7 +35,12 @@ git clone https://github.com/lawl/NoiseTorch # Clone the repository
  cd NoiseTorch # cd into the cloned repository
  make # build it
 
-
+# Mainline
+cd /home/$USER
+git clone https://github.com/bkw777/mainline.git
+cd mainline
+make
+sudo make install
 
 # Instalacja programów ze snapstore
 sudo snap install snap-store spotify thunderbird cacher telegram-desktop drawio bitwarden krita
