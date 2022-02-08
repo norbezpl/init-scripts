@@ -5,7 +5,6 @@
 
 # Skrypt aktywujący inne skrypty
 
-cd /home/$USER/script-installation-programs/scripts
 cd kernels
 ./lowlatency.sh
 ./xanmod.sh
