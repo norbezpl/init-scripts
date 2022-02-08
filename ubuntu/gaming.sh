@@ -4,7 +4,7 @@
 # https://gitlab.com/rswat09/gamebuntu
 
 # Skrypt aktywujący inne skrypty
-
+# brak scieżki gitowej
 cd kernels
 ./lowlatency.sh
 ./xanmod.sh
