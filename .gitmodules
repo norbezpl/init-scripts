@@ -1,3 +1,6 @@
 [submodule "auto-update"]
 	path = auto-update
 	url = https://github.com/norbezpl/auto-update-linux
+[submodule "gamebuntu"]
+	path = gamebuntu
+	url = https://gitlab.com/rswat09/gamebuntu.git
