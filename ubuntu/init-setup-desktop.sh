@@ -26,9 +26,9 @@ sudo dpkg -i chrome.deb
 sudo rm -r ~/Downloads/chrome.deb
 
 # Instalowanie golang
-sudo add-apt-repository ppa:longsleep/golang-backports
+sudo add-apt-repository -y ppa:longsleep/golang-backports
 sudo apt update
-apt install golang-go
+apt install -y golang-go
 
 # Noise torch do dźwięku
 git clone https://github.com/lawl/NoiseTorch # Clone the repository
