@@ -13,6 +13,14 @@ apt update
 sudo apt install -y libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
 sudo apt install -y snapd net-tools ssh mainline
 
+
+# Add official Wine repository
+echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -sc) main' | sudo tee /etc/apt/sources.list.d/winehq.list    
+wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/winehq.key add -
+sudo apt update
+
+# Elementary
+
 apt update
 sudo apt install elementary-tweaks
 sudo apt install snapd ukuu net-tools ssh gdebi software-properties-common libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev elementary-sdk pantheon-tweaks
