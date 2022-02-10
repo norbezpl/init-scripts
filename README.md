@@ -1,7 +1,9 @@
 # Skrypt oparty na Bash do instalacji oprogramowania
 # Jak używać?
 Gotowa komenda do uruchomienia instalatora 
-```sh apt install -y git &&  git clone https://github.com/norbezpl/init-scripts.git && chmod -R 775 init-scripts && cd init-scripts && ./instalator.sh```
+```
+ apt install -y git &&  git clone https://github.com/norbezpl/init-scripts.git && chmod -R 775 init-scripts && cd init-scripts && ./instalator.sh
+ ```
 1. Pobierz projekt albo sklonuj "apt install -y git && git clone https://github.com/norbezpl/ &&script-installation-programs.git"
 2. run ``chmod +x init-setup.sh && chmod -x init-setup2.sh && chmod -x init-setup-desktop.sh && chmod -x init-setup-server.sh && ./init-setup*.sh``
 (optional) ``mkdir /var/scripts && chmod -R 755 /var/scripts``
