@@ -27,7 +27,7 @@ echo "Installing Docker"
 sleep 2s
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 cat /etc/os-release
-read -p "INFORME O NONE DO UBUNTU_CODENAME DO TEXTO ACIMA: " codename
+read -p "Wpisz wersje z pozycji UBUNTU_CODENAME: " codename
 sudo su << SUDO_COMANDS
 echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${codename} stable" >> /etc/apt/sources.list
 SUDO_COMANDS
