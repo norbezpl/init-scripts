@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Focalfoard installer
+# Focalboard installer
 
 mkdir /var/download
 cd  /var/download

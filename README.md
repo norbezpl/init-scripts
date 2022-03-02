@@ -2,6 +2,9 @@
 # Jak używać?
 Gotowa komenda do uruchomienia instalatora 
 ```
+bash <(curl -fsL https://github.com/norbezpl/init-scripts/install.sh)
+```
+```
  apt install -y git &&  git clone https://github.com/norbezpl/init-scripts.git && chmod -R 775 init-scripts && cd init-scripts && ./instalator.sh
  ```
 1. Pobierz projekt albo sklonuj "apt install -y git && git clone https://github.com/norbezpl/ &&script-installation-programs.git"
