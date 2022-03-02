@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Wersja dla użytku dla @norbezpl
+# Skrypt na distro
+# najlepiej wybierane
 
 # Instalowanie podstawowych narzędzi do linuxa desktop
 sudo apt update
@@ -16,6 +18,7 @@ sudo apt install -y snapd net-tools ssh mainline
 echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -sc) main' | sudo tee /etc/apt/sources.list.d/winehq.list    
 wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/winehq.key add -
 sudo apt update
+
 
 # Elementary
 
@@ -42,21 +45,20 @@ git clone https://github.com/lawl/NoiseTorch # Clone the repository
  make # build it
 
 # Mainline
-mkdir /etc/test
-cd /etc/test
-git clone https://github.com/bkw777/mainline.git
-cd mainline
-make
-sudo make install
+# mkdir /etc/test
+# cd /etc/test
+# git clone https://github.com/bkw777/mainline.git
+# cd mainline
+# make
+# sudo make install
 
 # Instalacja programów ze snapstore
-sudo snap install snap-store spotify thunderbird cacher telegram-desktop drawio bitwarden krita
+sudo snap install snap-store spotify thunderbird cacher drawio bitwarden krita
 sudo snap install code --classic
-snap install android-studio --classic
-snap install gitkraken --classic
-snap install discord 
+sudo snap install android-studio --classic
+sudo snap install gitkraken --classic
+sudo snap install discord 
 
-# sprawdzić czy linia 8 i 9 działa z -y
 
 
 # sudo apt install libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev elementary-sdk

@@ -17,20 +17,32 @@ git config --global user.name "$git_name"
 #INSTALL DOCKER
 echo "Installing Docker"
 sleep 2s
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-cat /etc/os-release
-read -p "Wpisz wersje z pozycji UBUNTU_CODENAME: " codename
-sudo su << SUDO_COMANDS
-echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${codename} stable" >> /etc/apt/sources.list
-SUDO_COMANDS
-sudo apt update -y
-sudo apt install -y docker-ce docker-ce-cli containerd.io
-sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo systemctl enable docker
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# cat /etc/os-release
+# read -p "Wpisz wersje z pozycji UBUNTU_CODENAME: " codename
+# sudo su << SUDO_COMANDS
+# echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${codename} stable" >> /etc/apt/sources.list
+# SUDO_COMANDS
+# sudo apt update -y
+# sudo apt install -y docker-ce docker-ce-cli containerd.io
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# sudo systemctl enable docker
 
 #INSTALL DOCKER-COMPOSE
 echo "Installing Docker Compose"
 sleep 2s
+<<<<<<< HEAD
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
+=======
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+# sudo chmod +x /usr/bin/docker-compose
+
+# Konfiguracja git
+read -p "Wpisz adres e-mail, aby skonfigurować zatwierdzenia git (ten sam, który jest używany na Twoim koncie): " git_email
+read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach: " git_name
+git config --global user.email "$git_email"
+git config --global user.name "$git_name"
+
+>>>>>>> ee579afab078fd1420d4d166efdf7695eeab9789
