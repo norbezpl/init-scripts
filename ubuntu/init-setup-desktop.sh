@@ -5,12 +5,10 @@
 # Instalowanie podstawowych narzędzi do linuxa desktop
 sudo apt update
 sudo apt upgrade -y
-sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
-sudo add-apt-repository -y ppa:philip.scott/pantheon-tweaks
 sudo add-apt-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository -y ppa:cappelikan/ppa
 apt update
-sudo apt install -y libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
+sudo apt install -y libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude snapd ukuu net-tools ssh gdebi software-properties-common libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev
 sudo apt install -y snapd net-tools ssh mainline
 
 
@@ -22,16 +20,16 @@ sudo apt update
 # Elementary
 
 apt update
-sudo apt install elementary-tweaks
-sudo apt install snapd ukuu net-tools ssh gdebi software-properties-common libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev elementary-sdk pantheon-tweaks
+sudo apt install snapd ukuu net-tools ssh gdebi software-properties-common libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev
 
 # Instalacja google chrome
 echo "Installing Chrome" # nie działa
 sleep 2s
-cd ~/Downloads/
+mkdir /etc/down
+cd /etc/down
 wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i chrome.deb
-sudo rm -r ~/Downloads/chrome.deb
+sudo rm -r /etc/down/chrome.deb
 
 # Instalowanie golang
 sudo add-apt-repository -y ppa:longsleep/golang-backports
