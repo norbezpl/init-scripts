@@ -61,7 +61,7 @@ composer global require hirak/prestissimo
 
 #CONFIGURANDO GIT
 read -p "Wpisz adres e-mail, aby skonfigurować zatwierdzenia git (ten sam, który jest używany na Twoim koncie): " git_email
-read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach:" git_name
+read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach: " git_name
 git config --global user.email "$git_email"
 git config --global user.name "$git_name"
 
