@@ -8,7 +8,6 @@ sudo apt upgrade -y
 sudo apt install git -y
 
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
-
 # mkdir /etc/scripts
 # cp /init-scripts/auto-update/update.sh /etc/scripts
 
