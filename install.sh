@@ -7,6 +7,11 @@ sudo apt upgrade -y
 
 sudo apt install git -y
 
+# git clone --recursive https://github.com/norbezpl/init-scripts.git
+
+# mkdir /etc/scripts
+# cp /init-scripts/auto-update/update.sh /etc/scripts
+
 # konfiguracja git
 read -p "Wpisz adres e-mail, aby skonfigurować zatwierdzenia git (ten sam, który jest używany na Twoim koncie): " git_email
 read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach: " git_name
@@ -47,6 +52,10 @@ flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
 flatpak install flathub org.telegram.desktop -y 
+flatpak install flathub com.github.alainm23.planner -y
+# flatpak install flathub net.devolutions.RDM -y # propositon
+flatpak install flathub com.google.AndroidStudio -y
+flatpak install flathub app.resp.RESP -y
 
 
 # You use laptop or PC?
@@ -65,5 +74,8 @@ wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/inte
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu-dbgsym_1.3.22890_amd64.ddeb
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu_1.3.22890_amd64.deb
 sudo dpkg -i *.deb
+
+sudo apt update
+sudo apt upgrade -y
 
 sudo apt autoremove -y 
