@@ -7,6 +7,7 @@ sudo apt upgrade -y
 
 sudo apt install git -y
 
+# TODO | IDEA
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
 # mkdir /etc/scripts
 # cp /init-scripts/auto-update/update.sh /etc/scripts
@@ -56,11 +57,6 @@ flatpak install flathub com.github.alainm23.planner -y
 flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub app.resp.RESP -y
 
-
-# You use laptop or PC?
-# PC > 
-# Laptop > sudo apt install -y tlp tlp-rdw
-
 # install opencl drivers
 cd ~
 mkdir neo
@@ -77,4 +73,14 @@ sudo dpkg -i *.deb
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt autoremove -y 
+sudo apt autoremove -y
+
+# TODO
+
+# You use laptop or PC?
+# PC > 
+# Laptop > sudo apt install -y tlp tlp-rdw
+
+# Do you playing games? 
+#YES> 
+#NO> 
