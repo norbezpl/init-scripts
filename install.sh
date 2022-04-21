@@ -5,7 +5,7 @@
 sudo apt update 
 sudo apt upgrade -y 
 
-sudo apt install git -y
+sudo apt install git -y 
 
 # TODO | IDEA
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
@@ -53,9 +53,12 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
 flatpak install flathub org.telegram.desktop -y 
 flatpak install flathub com.github.alainm23.planner -y
-# flatpak install flathub net.devolutions.RDM -y # propositon
+flatpak install flathub net.devolutions.RDM -y # propositon
 flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub app.resp.RESP -y
+flatpak install flathub org.remmina.Remmina -y
+flatpak install flathub org.gnome.Boxes -y
+flatpak install flathub com.valvesoftware.Steam -y
 
 # install opencl drivers
 cd ~
