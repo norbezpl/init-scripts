@@ -5,7 +5,7 @@
 sudo apt update 
 sudo apt upgrade -y 
 
-sudo apt install git -y 
+sudo apt install git flatpak -y 
 
 # TODO | IDEA
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
@@ -46,7 +46,7 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo dpkg -i chrome.deb
 sudo rm -r /etc/down/chrome.deb
 
-
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
 flatpak install flathub com.spotify.Client -y 
 flatpak install flathub com.discordapp.Discord -y
@@ -72,6 +72,8 @@ wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/inte
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu-dbgsym_1.3.22890_amd64.ddeb
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu_1.3.22890_amd64.deb
 sudo dpkg -i *.deb
+rm -f *.deb
+rm -f *.ddeb
 
 sudo apt update
 sudo apt upgrade -y
