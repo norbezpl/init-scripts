@@ -8,11 +8,11 @@ echo "================"
 echo "adding python3.9 repo"
 echo "================"
 add-apt-repository ppa:deadsnakes/ppa -y
-echo "================"
-echo "adding flatpak repo"
-echo "================"
-sudo add-apt-repository ppa:flatpak/stable -y 
-echo "================"
+# echo "================"
+# echo "adding flatpak repo"
+# echo "================"
+# sudo add-apt-repository ppa:flatpak/stable -y 
+# echo "================"
 echo "adding libreoffice repo"
 echo "================"
 sudo add-apt-repository ppa:libreoffice/ppa -y
