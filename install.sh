@@ -5,12 +5,18 @@
 sudo apt update 
 sudo apt upgrade -y 
 
+echo "================"
 echo "Installing GIT"
+echo "================"
 sudo apt install git -y 
+echo "================"
 echo "Installing flatpak"
+echo "================"
 sudo apt install flatpak -y
 # Adding python3.9 repo
+echo "================"
 echo "adding python3.9 repo"
+echo "================"
 add-apt-repository ppa:deadsnakes/ppa -y
 
 # TODO | IDEA
@@ -19,7 +25,9 @@ add-apt-repository ppa:deadsnakes/ppa -y
 # cp /init-scripts/auto-update/update.sh /etc/scripts
 
 # konfiguracja git
+echo "================"
 read -p "Wpisz adres e-mail, aby skonfigurować zatwierdzenia git (ten sam, który jest używany na Twoim koncie): " git_email
+echo "================"
 read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach: " git_name
 git config --global user.email "$git_email"
 git config --global user.name "$git_name"
@@ -39,32 +47,46 @@ sudo apt-get install -y software-properties-common
 sudo apt-get install -y bat
 
 # add VS CODE repo
+echo "================"
 echo "Adding vscode repos"
+echo "================"
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 # add NALA frontend terminal apt alternative
+echo "================"
 echo "Adding Nala repos"
+echo "================"
 echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 
 sudo apt update
 
+echo "================"
 echo "Installing libpython3.9"
+echo "================"
 sudo apt install python3.9 python3.9-venv python3.9-dev -y
+echo "================"
 echo "Installing VScode"
+echo "================"
 sudo apt install -y code
+echo "================"
 echo "Installing timeshift"
+echo "================"
 sudo apt install -y timeshift
+echo "================"
 echo "Installing nala" 
+echo "================"
 sudo apt install -y nala
 
 
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # Android studio uses this
 
 # Instalacja google chrome
+echo "================"
 echo "Installing Chrome"
+echo "================"
 sleep 2s
 mkdir /etc/down
 cd /etc/down
@@ -72,7 +94,9 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo dpkg -i chrome.deb
 sudo rm -r /etc/down/chrome.deb
 
+echo "================"
 echo "Installing flatpak apps"
+echo "================"
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
 flatpak install flathub com.spotify.Client -y 
@@ -88,6 +112,9 @@ flatpak install flathub org.remmina.Remmina -y
 flatpak install flathub com.valvesoftware.Steam -y
 
 # install opencl drivers
+echo "================"
+echo "Installing opencl drivers"
+echo "================"
 cd ~
 mkdir neo
 cd neo
