@@ -2,6 +2,36 @@
 
 # Developer tools install script 
 
+# Repos
+# Adding python3.9 repo
+echo "================"
+echo "adding python3.9 repo"
+echo "================"
+add-apt-repository ppa:deadsnakes/ppa -y
+echo "================"
+echo "adding flatpak repo"
+echo "================"
+sudo add-apt-repository ppa:flatpak/stable -y 
+echo "================"
+echo "adding libreoffice repo"
+echo "================"
+sudo add-apt-repository ppa:libreoffice/ppa -y
+# add VS CODE repo
+echo "================"
+echo "Adding vscode repos"
+echo "================"
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+# add NALA frontend terminal apt alternative
+echo "================"
+echo "Adding Nala repos"
+echo "================"
+echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+
+
 sudo apt update 
 sudo apt upgrade -y 
 
@@ -13,14 +43,13 @@ echo "================"
 echo "Installing flatpak"
 echo "================"
 sudo apt install flatpak -y
-# Adding python3.9 repo
 echo "================"
-echo "adding python3.9 repo"
+echo "Installing libpython3.9"
 echo "================"
-add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt install python3.9 python3.9-venv python3.9-dev -y
 
 # TODO | IDEA
-# git clone --recursive https://github.com/norbezpl/init-scripts.git
+# git clone https://github.com/norbezpl/init-scripts.git
 # mkdir /etc/scripts
 # cp /init-scripts/auto-update/update.sh /etc/scripts
 
@@ -45,28 +74,10 @@ sudo apt-get install -y ssh
 sudo apt-get install -y ufw 
 sudo apt-get install -y software-properties-common
 sudo apt-get install -y bat
-
-# add VS CODE repo
-echo "================"
-echo "Adding vscode repos"
-echo "================"
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-rm -f packages.microsoft.gpg
-# add NALA frontend terminal apt alternative
-echo "================"
-echo "Adding Nala repos"
-echo "================"
-echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+sudo apt-get install -y libreoffice
 
 sudo apt update
 
-echo "================"
-echo "Installing libpython3.9"
-echo "================"
-sudo apt install python3.9 python3.9-venv python3.9-dev -y
 echo "================"
 echo "Installing VScode"
 echo "================"
