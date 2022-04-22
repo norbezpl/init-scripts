@@ -5,7 +5,10 @@
 sudo apt update 
 sudo apt upgrade -y 
 
-sudo apt install git flatpak -y 
+echo "Installing GIT"
+sudo apt install git -y 
+echo "Installing flatpak"
+sudo apt install flatpak -y 
 
 # TODO | IDEA
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
