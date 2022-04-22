@@ -39,10 +39,10 @@ echo "================"
 echo "Installing GIT"
 echo "================"
 sudo apt install git -y 
-echo "================"
-echo "Installing flatpak"
-echo "================"
-sudo apt install flatpak -y
+# echo "================"
+# echo "Installing flatpak"
+# echo "================"
+# sudo apt install flatpak -y
 echo "================"
 echo "Installing libpython3.9"
 echo "================"
