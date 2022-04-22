@@ -152,8 +152,8 @@ wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/inte
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu-dbgsym_1.3.22890_amd64.ddeb
 wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu_1.3.22890_amd64.deb
 sudo dpkg -i *.deb
-rm -f *.deb
-rm -f *.ddeb
+sudo rm -f *.deb
+sudo rm -f *.ddeb
 
 sudo apt update
 sudo apt upgrade -y
