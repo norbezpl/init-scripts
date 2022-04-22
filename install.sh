@@ -12,8 +12,8 @@ add-apt-repository ppa:deadsnakes/ppa -y
 # echo "adding flatpak repo"
 # echo "================"
 # sudo add-apt-repository ppa:flatpak/stable -y 
-# echo "================"
-echo "adding libreoffice repo"
+echo "================"
+echo "Adding libreoffice repo"
 echo "================"
 sudo add-apt-repository ppa:libreoffice/ppa -y
 # add VS CODE repo
