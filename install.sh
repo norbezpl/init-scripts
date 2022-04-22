@@ -8,7 +8,10 @@ sudo apt upgrade -y
 echo "Installing GIT"
 sudo apt install git -y 
 echo "Installing flatpak"
-sudo apt install flatpak -y 
+sudo apt install flatpak -y
+# Adding python3.9 repo
+echo "adding python3.9 repo"
+add-apt-repository ppa:deadsnakes/ppa -y
 
 # TODO | IDEA
 # git clone --recursive https://github.com/norbezpl/init-scripts.git
@@ -23,20 +26,39 @@ git config --global user.name "$git_name"
 
 sudo apt install -y ubuntu-restricted-extras
 
-sudo apt-get install -y gdebi mc wget gpg apt-transport-https snapd net-tools ssh ufw software-properties-common bat
+sudo apt-get install -y gdebi 
+sudo apt-get install -y mc 
+sudo apt-get install -y wget 
+sudo apt-get install -y gpg 
+sudo apt-get install -y apt-transport-https 
+sudo apt-get install -y snapd 
+sudo apt-get install -y net-tools 
+sudo apt-get install -y ssh
+sudo apt-get install -y ufw 
+sudo apt-get install -y software-properties-common
+sudo apt-get install -y bat
 
 # add VS CODE repo
+echo "Adding vscode repos"
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
-
+# add NALA frontend terminal apt alternative
+echo "Adding Nala repos"
 echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 
 sudo apt update
 
-sudo apt install -y code timeshift nala
+echo "Installing VScode"
+sudo apt install -y code
+echo "Installing timeshift"
+sudo apt install -y timeshift
+echo "Installing nala" 
+sudo apt install -y nala
+echo "Installing libpython3.9"
+sudo apt install python3.9 python3.9-venv python3.9-dev -y
 
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # Android studio uses this
 
@@ -49,6 +71,7 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo dpkg -i chrome.deb
 sudo rm -r /etc/down/chrome.deb
 
+echo "Installing flatpak apps"
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
 flatpak install flathub com.spotify.Client -y 
@@ -60,7 +83,7 @@ flatpak install flathub net.devolutions.RDM -y # propositon
 flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub app.resp.RESP -y
 flatpak install flathub org.remmina.Remmina -y
-flatpak install flathub org.gnome.Boxes -y
+#flatpak install flathub org.gnome.Boxes -y
 flatpak install flathub com.valvesoftware.Steam -y
 
 # install opencl drivers
