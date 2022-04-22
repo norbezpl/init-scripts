@@ -51,14 +51,15 @@ wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gp
 
 sudo apt update
 
+echo "Installing libpython3.9"
+sudo apt install python3.9 python3.9-venv python3.9-dev -y
 echo "Installing VScode"
 sudo apt install -y code
 echo "Installing timeshift"
 sudo apt install -y timeshift
 echo "Installing nala" 
 sudo apt install -y nala
-echo "Installing libpython3.9"
-sudo apt install python3.9 python3.9-venv python3.9-dev -y
+
 
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # Android studio uses this
 
