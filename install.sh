@@ -99,17 +99,32 @@ echo "Installing flatpak apps"
 echo "================"
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
+echo "Install spotify"
 flatpak install flathub com.spotify.Client -y 
+echo "Install discord"
 flatpak install flathub com.discordapp.Discord -y
+echo "Install tor"
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
+echo "Install telegram"
 flatpak install flathub org.telegram.desktop -y 
+echo "Install planner"
 flatpak install flathub com.github.alainm23.planner -y
-flatpak install flathub net.devolutions.RDM -y # propositon
+#echo "Installing flatpak apps"
+#flatpak install flathub net.devolutions.RDM -y # propositon
+echo "Install android studi"
 flatpak install flathub com.google.AndroidStudio -y
+echo "Install RESP Gui for redis"
 flatpak install flathub app.resp.RESP -y
+echo "Install Remmina"
 flatpak install flathub org.remmina.Remmina -y
+#echo "Installing flatpak apps"
 #flatpak install flathub org.gnome.Boxes -y
+echo "Install Steam"
 flatpak install flathub com.valvesoftware.Steam -y
+echo "Install Megasync"
+flatpak install flathub nz.mega.MEGAsync -y
+echo "Install gimp"
+flatpak install flathub org.gimp.Install 
 
 # install opencl drivers
 echo "================"
