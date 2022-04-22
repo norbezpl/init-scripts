@@ -7,7 +7,7 @@
 echo "================"
 echo "adding python3.9 repo"
 echo "================"
-add-apt-repository ppa:deadsnakes/ppa -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
 # echo "================"
 # echo "adding flatpak repo"
 # echo "================"
@@ -108,7 +108,7 @@ sudo rm -r /etc/down/chrome.deb
 echo "================"
 echo "Installing flatpak apps"
 echo "================"
-flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
 echo "Install spotify"
 flatpak install flathub com.spotify.Client -y 
