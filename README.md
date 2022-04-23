@@ -4,41 +4,5 @@
 ## Gotowa komenda do uruchomienia instalatora 
 
 ```
-curl https://raw.githubusercontent.com/norbezpl/init-scripts/main/install.sh > install.sh && sudo bash install.sh
+curl https://raw.githubusercontent.com/norbezpl/init-scripts/tester/install.sh > install.sh && sudo bash install.sh
 ```
-
-#  Lista programów która zostanie zainstalowana przy użyciu "init-setup2.sh"
-
-1. php 5.6 - 7.0 - 7.1 - 7.2 with fpm
-3. nginx 
-4. wget 
-5. silversearcher-ag 
-6. guake 
-7. git 
-8. curl 
-9. nano 
-10. apt-transport-https 
-11. ca-certificates 
-12. gnupg-agent 
-13. software-properties-common
-14. Docker
-15. Docker Compose
-16. Composer
-17.  hirak/prestissimo ( DOWNLOADS PACKAGES IN PARALLEL FOR COMPOSER)
-18. Mysql
-19. VSCODE
-20. Jetbrains Toolbox
-21. Chrome
-22. N98 magerun
-23. N98 Magerun2
-24. Magento Cloud CLI
-
-# Inne konfiguracje wchodzące w skład init-setup2.sh
-
-1. Generation SSH keys
-2. Generation SSL keys
-3. Xdebug configuration for all installed php
-
-#  Lista programów która zostanie zainstalowana przy użyciu "init-setup.sh"
-
-
