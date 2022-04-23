@@ -111,13 +111,13 @@ echo "================"
 # flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 apps from flatpak
 echo "Install spotify"
-flatpak install flathub com.spotify.Client -y 
+flatpak install flathub com.spotify.Client 
 echo "Install discord"
 flatpak install flathub com.discordapp.Discord -y
 echo "Install tor"
-flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 echo "Install telegram"
-flatpak install flathub org.telegram.desktop -y 
+flatpak install flathub org.telegram.desktop -y
 echo "Install planner"
 flatpak install flathub com.github.alainm23.planner -y
 echo "Installing flatpak apps"
