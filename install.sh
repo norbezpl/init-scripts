@@ -105,58 +105,58 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo dpkg -i chrome.deb
 sudo rm -r /etc/down/chrome.deb
 
-# echo "================"
-# echo "Installing flatpak apps"
-# echo "================"
+echo "================"
+echo "Installing flatpak apps"
+echo "================"
 # flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# # apps from flatpak
-# echo "Install spotify"
-# flatpak install flathub com.spotify.Client -y 
-# echo "Install discord"
-# flatpak install flathub com.discordapp.Discord -y
-# echo "Install tor"
-# flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
-# echo "Install telegram"
-# flatpak install flathub org.telegram.desktop -y 
-# echo "Install planner"
-# flatpak install flathub com.github.alainm23.planner -y
-# #echo "Installing flatpak apps"
-# #flatpak install flathub net.devolutions.RDM -y # propositon
-# echo "Install android studio"
-# flatpak install flathub com.google.AndroidStudio -y
-# echo "Install RESP Gui for redis"
-# flatpak install flathub app.resp.RESP -y
-# echo "Install Remmina"
-# flatpak install flathub org.remmina.Remmina -y
-# #echo "Installing flatpak apps"
-# #flatpak install flathub org.gnome.Boxes -y
-# echo "Install Steam"
-# flatpak install flathub com.valvesoftware.Steam -y
-# echo "Install Megasync"
-# flatpak install flathub nz.mega.MEGAsync -y
+apps from flatpak
+echo "Install spotify"
+flatpak install flathub com.spotify.Client -y 
+echo "Install discord"
+flatpak install flathub com.discordapp.Discord -y
+echo "Install tor"
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
+echo "Install telegram"
+flatpak install flathub org.telegram.desktop -y 
+echo "Install planner"
+flatpak install flathub com.github.alainm23.planner -y
+echo "Installing flatpak apps"
+flatpak install flathub net.devolutions.RDM -y # propositon
+echo "Install android studio"
+flatpak install flathub com.google.AndroidStudio -y
+echo "Install RESP Gui for redis"
+flatpak install flathub app.resp.RESP -y
+echo "Install Remmina"
+flatpak install flathub org.remmina.Remmina -y
+echo "Installing flatpak apps"
+flatpak install flathub org.gnome.Boxes -y
+echo "Install Steam"
+flatpak install flathub com.valvesoftware.Steam -y
+echo "Install Megasync"
+flatpak install flathub nz.mega.MEGAsync -y
 # echo "Install gimp"
 # flatpak install flathub org.gimp.Install 
-echo 'Installing snap aplications'
-sudo snap install inkscape
-sudo snap install signal-desktop
-sudo snap install pycharm-community --classic
-sudo snap install android-studio --classic
-sudo snap install discord
-sudo snap install krita --candidate
-sudo snap install spotify
-sudo snap install blender --classic
-sudo snap install telegram-desktop
-sudo snap install bitwarden
-sudo snap install beekeeper-studio
-sudo snap install brave
-sudo snap install mailspring
-sudo snap install simplenote
-sudo snap install drawio
-sudo snap install standard-notes
-sudo snap install youtube-dl
-sudo snap install darktable
-sudo snap install wonderwall
-sudo snap install snap-store
+# echo 'Installing snap aplications'
+# sudo snap install inkscape
+# sudo snap install signal-desktop
+# sudo snap install pycharm-community --classic
+# sudo snap install android-studio --classic
+# sudo snap install discord
+# sudo snap install krita --candidate
+# sudo snap install spotify
+# sudo snap install blender --classic
+# sudo snap install telegram-desktop
+# sudo snap install bitwarden
+# sudo snap install beekeeper-studio
+# sudo snap install brave
+# sudo snap install mailspring
+# sudo snap install simplenote
+# sudo snap install drawio
+# sudo snap install standard-notes
+# sudo snap install youtube-dl
+# sudo snap install darktable
+# sudo snap install wonderwall
+# sudo snap install snap-store
 
 # install opencl drivers
 echo "================"
