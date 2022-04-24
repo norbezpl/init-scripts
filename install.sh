@@ -4,10 +4,10 @@
 
 # Repos
 # Adding python3.9 repo
-echo "================"
-echo "adding python3.9 repo"
-echo "================"
-sudo add-apt-repository ppa:deadsnakes/ppa -y
+# echo "================"
+# echo "adding python3.9 repo"
+# echo "================"
+# sudo add-apt-repository ppa:deadsnakes/ppa -y
 # echo "================"
 # echo "adding flatpak repo"
 # echo "================"
@@ -25,11 +25,11 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 # add NALA frontend terminal apt alternative
-echo "================"
-echo "Adding Nala repos"
-echo "================"
-echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+# echo "================"
+# echo "Adding Nala repos"
+# echo "================"
+# echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+# wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 
 
 sudo apt update 
@@ -46,7 +46,7 @@ sudo apt install git -y
 echo "================"
 echo "Installing libpython3.9"
 echo "================"
-sudo apt install python3.9 python3.9-venv python3.9-dev -y
+sudo apt install -y python3.9 python3.9-venv python3.9-dev ython3-pip
 
 # TODO | IDEA
 # git clone https://github.com/norbezpl/init-scripts.git
@@ -86,10 +86,10 @@ echo "================"
 echo "Installing timeshift"
 echo "================"
 sudo apt install -y timeshift
-echo "================"
-echo "Installing nala" 
-echo "================"
-sudo apt install -y nala
+# echo "================"
+# echo "Installing nala" 
+# echo "================"
+# sudo apt install -y nala
 
 
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # Android studio uses this
