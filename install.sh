@@ -4,10 +4,10 @@
 
 # Repos
 # Adding python3.9 repo
-echo "================"
-echo "adding python3.9 repo"
-echo "================"
-sudo add-apt-repository ppa:deadsnakes/ppa -y
+# echo "================"
+# echo "adding python3.9 repo"
+# echo "================"
+# sudo add-apt-repository ppa:deadsnakes/ppa -y
 # echo "================"
 # echo "adding flatpak repo"
 # echo "================"
@@ -25,11 +25,11 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 # add NALA frontend terminal apt alternative
-echo "================"
-echo "Adding Nala repos"
-echo "================"
-echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+# echo "================"
+# echo "Adding Nala repos"
+# echo "================"
+# echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+# wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 
 
 sudo apt update 
@@ -43,10 +43,10 @@ sudo apt install git -y
 # echo "Installing flatpak"
 # echo "================"
 # sudo apt install flatpak -y
-echo "================"
-echo "Installing libpython3.9"
-echo "================"
-sudo apt install python3.9 python3.9-venv python3.9-dev -y
+# echo "================"
+# echo "Installing libpython3.9"
+# echo "================"
+# sudo apt install python3.9 python3.9-venv python3.9-dev -y
 
 # TODO | IDEA
 # git clone https://github.com/norbezpl/init-scripts.git
@@ -58,6 +58,7 @@ echo "================"
 read -p "Wpisz adres e-mail, aby skonfigurować zatwierdzenia git (ten sam, który jest używany na Twoim koncie): " git_email
 echo "================"
 read -p "Wpisz nazwę, która pojawi się w zatwierdzeniach: " git_name
+echo "================"
 git config --global user.email "$git_email"
 git config --global user.name "$git_name"
 
@@ -86,10 +87,10 @@ echo "================"
 echo "Installing timeshift"
 echo "================"
 sudo apt install -y timeshift
-echo "================"
-echo "Installing nala" 
-echo "================"
-sudo apt install -y nala
+# echo "================"
+# echo "Installing nala" 
+# echo "================"
+# sudo apt install -y nala
 
 
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # Android studio uses this
@@ -105,58 +106,59 @@ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_curre
 sudo dpkg -i chrome.deb
 sudo rm -r /etc/down/chrome.deb
 
-# echo "================"
-# echo "Installing flatpak apps"
-# echo "================"
+echo "================"
+echo "Installing flatpak apps"
+echo "================"
 # flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# # apps from flatpak
-# echo "Install spotify"
-# flatpak install flathub com.spotify.Client -y 
-# echo "Install discord"
-# flatpak install flathub com.discordapp.Discord -y
-# echo "Install tor"
-# flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
-# echo "Install telegram"
-# flatpak install flathub org.telegram.desktop -y 
-# echo "Install planner"
-# flatpak install flathub com.github.alainm23.planner -y
+# apps from flatpak
+echo "Install spotify"
+flatpak install flathub com.spotify.Client -y 
+echo "Install discord"
+flatpak install flathub com.discordapp.Discord -y
+echo "Install tor"
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
+echo "Install telegram"
+flatpak install flathub org.telegram.desktop -y 
+echo "Install planner"
+flatpak install flathub com.github.alainm23.planner -y
 # #echo "Installing flatpak apps"
 # #flatpak install flathub net.devolutions.RDM -y # propositon
-# echo "Install android studio"
-# flatpak install flathub com.google.AndroidStudio -y
-# echo "Install RESP Gui for redis"
-# flatpak install flathub app.resp.RESP -y
-# echo "Install Remmina"
-# flatpak install flathub org.remmina.Remmina -y
+echo "Install android studio"
+flatpak install flathub com.google.AndroidStudio -y
+echo "Install RESP Gui for redis"
+flatpak install flathub app.resp.RESP -y
+echo "Install Remmina"
+flatpak install flathub org.remmina.Remmina -y
 # #echo "Installing flatpak apps"
 # #flatpak install flathub org.gnome.Boxes -y
-# echo "Install Steam"
-# flatpak install flathub com.valvesoftware.Steam -y
-# echo "Install Megasync"
-# flatpak install flathub nz.mega.MEGAsync -y
-# echo "Install gimp"
-# flatpak install flathub org.gimp.Install 
-echo 'Installing snap aplications'
-sudo snap install inkscape
-sudo snap install signal-desktop
-sudo snap install pycharm-community --classic
-sudo snap install android-studio --classic
-sudo snap install discord
-sudo snap install krita --candidate
-sudo snap install spotify
-sudo snap install blender --classic
-sudo snap install telegram-desktop
-sudo snap install bitwarden
-sudo snap install beekeeper-studio
-sudo snap install brave
-sudo snap install mailspring
-sudo snap install simplenote
-sudo snap install drawio
-sudo snap install standard-notes
-sudo snap install youtube-dl
-sudo snap install darktable
-sudo snap install wonderwall
-sudo snap install snap-store
+echo "Install Steam"
+flatpak install flathub com.valvesoftware.Steam -y
+echo "Install Megasync"
+flatpak install flathub nz.mega.MEGAsync -y
+echo "Install gimp"
+flatpak install flathub org.gimp.Install
+
+# echo 'Installing snap aplications'
+# sudo snap install inkscape
+# sudo snap install signal-desktop
+# sudo snap install pycharm-community --classic
+# sudo snap install android-studio --classic
+# sudo snap install discord
+# sudo snap install krita --candidate
+# sudo snap install spotify
+# sudo snap install blender --classic
+# sudo snap install telegram-desktop
+# sudo snap install bitwarden
+# sudo snap install beekeeper-studio
+# sudo snap install brave
+# sudo snap install mailspring
+# sudo snap install simplenote
+# sudo snap install drawio
+# sudo snap install standard-notes
+# sudo snap install youtube-dl
+# sudo snap install darktable
+# sudo snap install wonderwall
+# sudo snap install snap-store
 
 # install opencl drivers
 echo "================"
