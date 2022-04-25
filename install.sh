@@ -166,14 +166,14 @@ flatpak install flathub org.gimp.Install
 # echo "================"
 # cd ~
 # mkdir neo
-# cd neo
-# wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-gmmlib_22.0.2_amd64.deb
-# wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.10840/intel-igc-core_1.0.10840_amd64.deb
-# wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.10840/intel-igc-opencl_1.0.10840_amd64.deb
-# wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-opencl-icd-dbgsym_22.14.22890_amd64.ddeb
-# wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-opencl-icd_22.14.22890_amd64.deb
-# wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu-dbgsym_1.3.22890_amd64.ddeb
-# wget https://github.com/intel/compute-runtime/releases/download/22.14.22890/intel-level-zero-gpu_1.3.22890_amd64.deb
+cd neo
+wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/libigdgmm12_22.1.2_amd64.deb
+wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.10988/intel-igc-core_1.0.10988_amd64.deb
+wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.10988/intel-igc-opencl_1.0.10988_amd64.deb
+wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-opencl-icd-dbgsym_22.16.22992_amd64.ddeb
+wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-opencl-icd_22.16.22992_amd64.deb
+wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-level-zero-gpu-dbgsym_1.3.22992_amd64.ddeb
+wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-level-zero-gpu_1.3.22992_amd64.deb
 # sudo dpkg -i *.deb
 # sudo rm -f *.deb
 # sudo rm -f *.ddeb
