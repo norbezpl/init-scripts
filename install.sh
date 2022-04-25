@@ -109,7 +109,7 @@ sudo rm -r /etc/down/chrome.deb
 echo "================"
 echo "Installing flatpak apps"
 echo "================"
-# flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # apps from flatpak
 echo "Install spotify"
 flatpak install flathub com.spotify.Client -y 
