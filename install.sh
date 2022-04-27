@@ -12,6 +12,15 @@
 # echo "adding flatpak repo"
 # echo "================"
 # sudo add-apt-repository ppa:flatpak/stable -y 
+
+
+sudo apt update 
+sudo apt upgrade -y 
+
+echo "================"
+echo "Installing GIT"
+echo "================"
+sudo apt install git software-properties-common -y 
 echo "================"
 echo "Adding libreoffice repo"
 echo "================"
@@ -24,21 +33,17 @@ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > pa
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
-# add NALA frontend terminal apt alternative
-# echo "================"
-# echo "Adding Nala repos"
-# echo "================"
-# echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-# wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
-
-
-sudo apt update 
-sudo apt upgrade -y 
-
 echo "================"
-echo "Installing GIT"
+echo "Adding megasync repos"
 echo "================"
-sudo apt install git -y 
+curl -fsSL https://mega.nz/keys/MEGA_signing.key | sudo apt-key add -
+sudo echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_21.04/ ./" > /etc/apt/sources.list.d/megasync.list
+echo "================"
+echo "Adding telegram repos"
+echo "================"
+sudo add-apt-repository ppa:atareao/telegram
+
+
 # echo "================"
 # echo "Installing flatpak"
 # echo "================"
@@ -48,10 +53,6 @@ sudo apt install git -y
 # echo "================"
 # sudo apt install python3.9 python3.9-venv python3.9-dev -y
 
-# TODO | IDEA
-# git clone https://github.com/norbezpl/init-scripts.git
-# mkdir /etc/scripts
-# cp /init-scripts/auto-update/update.sh /etc/scripts
 
 # konfiguracja git
 echo "================"
@@ -64,8 +65,7 @@ git config --global user.name "$git_name"
 
 sudo apt install -y ubuntu-restricted-extras
 
-sudo apt-get install -y gdebi 
-sudo apt-get install -y mc 
+sudo apt-get install -y gdebi
 sudo apt-get install -y wget 
 sudo apt-get install -y gpg 
 sudo apt-get install -y apt-transport-https 
@@ -73,9 +73,8 @@ sudo apt-get install -y snapd
 sudo apt-get install -y net-tools 
 sudo apt-get install -y ssh
 sudo apt-get install -y ufw 
-sudo apt-get install -y software-properties-common
 sudo apt-get install -y bat
-sudo apt-get install -y libreoffice
+sudo apt-get install -y libreoffice megasync telegram
 
 sudo apt update
 
@@ -117,8 +116,8 @@ echo "Install discord"
 flatpak install flathub com.discordapp.Discord -y
 echo "Install tor"
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y 
-echo "Install telegram"
-flatpak install flathub org.telegram.desktop -y 
+#echo "Install telegram"
+#flatpak install flathub org.telegram.desktop -y 
 echo "Install planner"
 flatpak install flathub com.github.alainm23.planner -y
 # #echo "Installing flatpak apps"
@@ -133,8 +132,8 @@ flatpak install flathub org.remmina.Remmina -y
 # #flatpak install flathub org.gnome.Boxes -y
 echo "Install Steam"
 flatpak install flathub com.valvesoftware.Steam -y
-echo "Install Megasync"
-flatpak install flathub nz.mega.MEGAsync -y
+#echo "Install Megasync"
+#flatpak install flathub nz.mega.MEGAsync -y
 echo "Install gimp"
 flatpak install flathub org.gimp.Install
 
@@ -161,11 +160,11 @@ flatpak install flathub org.gimp.Install
 # sudo snap install snap-store
 
 # install opencl drivers
-# echo "================"
-# echo "Installing opencl drivers"
-# echo "================"
-# cd ~
-# mkdir neo
+echo "================"
+echo "Installing opencl drivers"
+echo "================"
+cd ~
+mkdir neo
 cd neo
 wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/libigdgmm12_22.1.2_amd64.deb
 wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.10988/intel-igc-core_1.0.10988_amd64.deb
@@ -174,9 +173,9 @@ wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/inte
 wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-opencl-icd_22.16.22992_amd64.deb
 wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-level-zero-gpu-dbgsym_1.3.22992_amd64.ddeb
 wget https://github.com/intel/compute-runtime/releases/download/22.16.22992/intel-level-zero-gpu_1.3.22992_amd64.deb
-# sudo dpkg -i *.deb
-# sudo rm -f *.deb
-# sudo rm -f *.ddeb
+sudo dpkg -i *.deb
+sudo rm -f *.deb
+sudo rm -f *.ddeb
 
 sudo apt update
 sudo apt upgrade -y
@@ -192,3 +191,8 @@ sudo apt autoremove -y
 # Do you playing games? 
 #YES> 
 #NO> 
+
+# TODO | IDEA
+# git clone https://github.com/norbezpl/init-scripts.git
+# mkdir /etc/scripts
+# cp /init-scripts/auto-update/update.sh /etc/scripts
